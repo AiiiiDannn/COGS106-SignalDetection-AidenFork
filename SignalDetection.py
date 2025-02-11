@@ -1,4 +1,4 @@
-import scipy.stats as stats
+import scipy.stats as stats  # Recommended from ChatGPT, spicy.stats provides faster computational speed, lower complexity and more accurate results.
 
 
 class SignalDetection:
@@ -32,6 +32,11 @@ class SignalDetection:
 
 
 if __name__ == "__main__":
-    sd = SignalDetection(hits=10, misses=20, false_alarms=15, correct_rejections=5)
+    sd = SignalDetection(
+        hits=10, misses=20, false_alarms=15, correct_rejections=5
+    )  # Just an exmaple valuees, match with my manual calculation.
+    print("Hit rate:", sd.hit_rate())
+    print("False alarm rate:", sd.false_alarm_rate())
+
     print("d' value:", sd.d_prime())
     print("Criterion value:", sd.criterion())
