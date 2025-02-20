@@ -29,7 +29,7 @@ class SignalDetection:
         hateRate = self.hit_rate()
         falseAlarmRate = self.false_alarm_rate()
 
-        return -0.5 * (stats.norm.ppf(hateRate) - stats.norm.ppf(falseAlarmRate))
+        return -0.5 * (stats.norm.ppf(hateRate) + stats.norm.ppf(falseAlarmRate))
 
 
 if __name__ == "__main__":
